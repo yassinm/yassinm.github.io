@@ -1,11 +1,11 @@
 ---
-title: Walking down memory lane (part 3)
-tag: [java ,memory]
 date: 2014-10-06
+tag: [java ,memory]
+title: Walking down memory lane (part 3)
 thumbnail: /images/walking-down-memory-lane-03-000.png
 ---
 
-If you remember our previous [article](/2014/09/21/2014/walking-down-memory-lane-02) we used a central memory location to share data between two separate threads each running either in the same process or across separate processes. These processes could even be located on separate machine or even be written in two different languages.
+If you remember our previous [article](/2014/09/25/2014/walking-down-memory-lane-02) we used a central memory location to share data between two separate threads each running either in the same process or across separate processes. These processes could even be located on separate machine or even be written in two different languages.
 
 {%img /images/walking-down-memory-lane-03-000.png 550px %}
 
