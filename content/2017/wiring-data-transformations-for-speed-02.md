@@ -3,12 +3,11 @@ date: 2017-09-10 11:00:00
 title: Wiring data transformations for speed (part 2)
 author: ["Yassin Mohamed"]
 
-# featured: ["top01"]
 tags : ["dataflow"]
 series : ["Wiring data transformations for speed"]
 ---
 
-If you remember our previous [article](/07/09/2017/wiring-data-transformations-for-speed-01) we highlighted some of the inherent complexities we introduce by writing code the way we do today. We also stopped at a very few high level because frankly speaking this was going to be a very long read if we did not stop ranting about the current state of affairs :((
+If you remember our previous [article](/2017/wiring-data-transformations-for-speed-01) we highlighted some of the inherent complexities we introduce by writing code the way we do today. We also stopped at a very few high level because frankly speaking this was going to be a very long read if we did not stop ranting about the current state of affairs :((
 
 In that article, we came to the conclusion that maybe we needed a way to remove those unnecessary complexities and deal with them outside the data flow graph to achieve maximum flexibility and speed. As the famous quote goes:
 

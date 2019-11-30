@@ -8,7 +8,7 @@ tags : ["memory"]
 series : ["Walking down memory lane"]
 ---
 
-If you remember our previous [article](/2014/09/25/2014/walking-down-memory-lane-02) we used a central memory location to share data between two separate threads each running either in the same process or across separate processes. These processes could even be located on separate machine or even be written in two different languages.
+If you remember our previous [article](/2014/walking-down-memory-lane-02) we used a central memory location to share data between two separate threads each running either in the same process or across separate processes. These processes could even be located on separate machine or even be written in two different languages.
 
 ![Fig1](/images/walking-down-memory-lane-03-000.png )
 

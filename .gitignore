@@ -3,12 +3,6 @@
 .vscode
 
 vendor
-node_modules
-package-lock.json
-
-# *.min.js
-# *.min.css
 
 public
 resources
-themes/dev
