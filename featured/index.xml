@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Featured on Yassin Mohamed</title>
+    <link>http://yassinm.github.io/featured/</link>
+    <description>Recent content in Featured on Yassin Mohamed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2019, Yassin Mohamed; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 06 Oct 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://yassinm.github.io/featured/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>top00</title>
+      <link>http://yassinm.github.io/featured/top00/</link>
+      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yassinm.github.io/featured/top00/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

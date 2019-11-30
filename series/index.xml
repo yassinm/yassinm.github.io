@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Series on Yassin Mohamed</title>
+    <link>http://yassinm.github.io/series/</link>
+    <description>Recent content in Series on Yassin Mohamed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2019, Yassin Mohamed; all rights reserved.</copyright>
+    <lastBuildDate>Sun, 10 Sep 2017 11:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://yassinm.github.io/series/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Wiring data transformations for speed</title>
+      <link>http://yassinm.github.io/series/wiring-data-transformations-for-speed/</link>
+      <pubDate>Sun, 10 Sep 2017 11:00:00 +0000</pubDate>
+      
+      <guid>http://yassinm.github.io/series/wiring-data-transformations-for-speed/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Walking down memory lane</title>
+      <link>http://yassinm.github.io/series/walking-down-memory-lane/</link>
+      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yassinm.github.io/series/walking-down-memory-lane/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

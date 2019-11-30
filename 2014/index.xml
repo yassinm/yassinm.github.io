@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2014s on Yassin Mohamed</title>
+    <link>http://yassinm.github.io/2014/</link>
+    <description>Recent content in 2014s on Yassin Mohamed</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright © 2019, Yassin Mohamed; all rights reserved.</copyright>
+    <lastBuildDate>Mon, 06 Oct 2014 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="http://yassinm.github.io/2014/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Walking down memory lane (part 3)</title>
+      <link>http://yassinm.github.io/2014/walking-down-memory-lane-03/</link>
+      <pubDate>Mon, 06 Oct 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yassinm.github.io/2014/walking-down-memory-lane-03/</guid>
+      <description>If you remember our previous article we used a central memory location to share data between two separate threads each running either in the same process or across separate processes.</description>
+    </item>
+    
+    <item>
+      <title>Walking down memory lane (part 2)</title>
+      <link>http://yassinm.github.io/2014/walking-down-memory-lane-02/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yassinm.github.io/2014/walking-down-memory-lane-02/</guid>
+      <description>As per our previous article we identified that we need a way to serialize objects into memory in a very efficient manner. To recap here is a picture showing the steps we need to remove when sending/receiving objects over the network.</description>
+    </item>
+    
+    <item>
+      <title>Walking down memory lane (part 1)</title>
+      <link>http://yassinm.github.io/2014/walking-down-memory-lane-01/</link>
+      <pubDate>Sun, 21 Sep 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://yassinm.github.io/2014/walking-down-memory-lane-01/</guid>
+      <description>One of the topics that you often have to deal with in java, especially in high performance and low latency distributed code, is how you send a set of objects to a worker thread in the most efficient manner.</description>
+    </item>
+    
+  </channel>
+</rss>

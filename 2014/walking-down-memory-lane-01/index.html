@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="generator" content="Hugo 0.60.1" />
+	
+	<title>Walking down memory lane (part 1) | Yassin Mohamed</title>
+	
+	
+
+	<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Walking down memory lane (part 1)"/>
+<meta name="twitter:description" content="One of the topics that you often have to deal with in java, especially in high performance and low latency distributed code, is how you send a set of objects to a worker thread in the most efficient manner."/>
+
+	<meta property="og:title" content="Walking down memory lane (part 1)" />
+<meta property="og:description" content="One of the topics that you often have to deal with in java, especially in high performance and low latency distributed code, is how you send a set of objects to a worker thread in the most efficient manner." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://yassinm.github.io/2014/walking-down-memory-lane-01/" />
+<meta property="article:published_time" content="2014-09-21T00:00:00+00:00" />
+<meta property="article:modified_time" content="2014-09-21T00:00:00+00:00" />
+
+
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	 crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Righteous%7CMerriweather:300,300i,400,400i,700,700i" rel="stylesheet">
+	<link href="http://yassinm.github.io/css/medium.css" rel="stylesheet">
+	<link href="http://yassinm.github.io/css/additional.css" rel="stylesheet">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top mediumnavigation nav-down">
+    <div class="container pr-0">
+        
+        <a class="navbar-brand" href="http://yassinm.github.io/">
+
+            
+            <span style="font-family:Righteous;">Yassin Mohamed</span>
+            
+        </a>
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMediumish" aria-controls="navbarSupportedContent"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        
+        <div class="collapse navbar-collapse" id="navbarMediumish">
+            
+            <ul class="navbar-nav ml-auto">
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://yassinm.github.io/series">Series</a>
+                </li>
+                 
+                <li class="nav-item ">
+                    <a class="nav-link" href="http://yassinm.github.io/tags">Tags</a>
+                </li>
+                
+            </ul>
+        </div>
+        
+    </div>
+</nav>
+
+
+        <div class="site-content">   
+            <div class="container">
+<div class="mainheading">
+    <h1 class="sitetitle">Yassin Mohamed</h1>
+    <p class="lead">
+         
+    </p>
+</div><div class="main-content">
+        
+        <div class="container">
+            <div class="row">
+                
+                <div class="col-md-2 pl-0"><div class="share sticky-top sticky-top-offset">
+    <p>Share</p>
+    <ul>
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://twitter.com/intent/tweet?text=Walking%20down%20memory%20lane%20%28part%201%29&url=http%3a%2f%2fyassinm.github.io%2f2014%2fwalking-down-memory-lane-01%2f" onclick="window.open(this.href, 'twitter-share', 'width=550,height=435');return false;">
+        <i class="fab fa-twitter"></i>
+        </a>
+        </li>
+        
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://facebook.com/sharer.php?u=http%3a%2f%2fyassinm.github.io%2f2014%2fwalking-down-memory-lane-01%2f" onclick="window.open(this.href, 'facebook-share', 'width=550,height=435');return false;">
+        <i class="fab fa-facebook-f"></i>
+        </a>
+        </li>
+
+        <li class="ml-1 mr-1">
+        <a target="_blank" href="https://www.xing.com/spi/shares/new?url=http%3a%2f%2fyassinm.github.io%2f2014%2fwalking-down-memory-lane-01%2f" onclick="window.open(this.href, 'xing-share', 'width=550,height=435');return false;">
+        <i class="fab fa-xing"></i>
+        </a>
+        </li>        
+    </ul>
+
+    
+</div>
+</div>
+                                
+                <div class="col-md-9 flex-first flex-md-unordered">
+                    <div class="mainheading">
+                        	
+                        <div class="row post-top-meta">
+                            <div class="col-xs-12 col-md-3 col-lg-2 text-center text-md-left mb-4 mb-md-0 md-nopad-right">
+                                <img class="author-thumb" src="http://yassinm.github.io/images/profile.png" alt="GopherAcademy">
+                            </div>
+                            <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left md-nopad-left">
+                                
+                                <a target="_blank" class="link-dark">Yassin Mohamed</a><br>
+                                
+                                <span class="author-description">
+                                    <i class="far fa-star"></i>
+                                    Sep 21, 2014
+                                    <i class="far fa-clock clock"></i>
+                                    6 min read
+                                </span>					
+                            </div>
+                        </div>			
+                        
+                        <h1 class="posttitle">Walking down memory lane (part 1)</h1> 
+                    </div>
+
+                    
+                    
+                    
+                    
+
+                    
+                    <div class="article-post">
+                        <p>One of the topics that you often have to deal with in java, especially in high performance and low latency distributed code, is how you send a set of objects to a worker thread in the most efficient manner. This thread could be running in the same process or on a completely separate machine located somewhere else in your network. This has always been the case for people coming from a c/c++ environment even before the advent of Java. However, Java has steadily gained so much in performance and JIT improvements over the years that nowadays it is on par , in some areas, with c/c++. This of course does not come free and requires a very careful design and a very good understanding of current IPC mechanisms. Moreover, some of the new techniques involving Off-heap memory allocations and lock free queues can even go further. As always, the devil is in the details. In this post i will try to first look at how you can pass data efficiently between different threads/processes and the different issues we have to solve when dealing with the java language.</p>
+<h2 id="serializingdeserializing">Serializing/de-serializing</h2>
+<p>If you want to pass around a block of memory in c/c++ all you need to do on the receiving side is cast the actual memory location to a particular structure and you immediately get an object you can play with. At your own risk of course! This scenario is similar to having all your belts off while driving a formula one vehicle and going the wrong way on a high speed lane … Other cars coming at you being the data that was sent to you. This is why you can refer to this practice as having “unsafe” relations with your data! On the flip side, this does not mean the code receiving the data has to be running within the same process. It could be running somewhere else in the universe as long as the actual data was transported successfully! You still have to take care of the normal Endian-ness of the platform, which is obviously also needed in Java, but that is all that’s required. Technically speaking, there is no need for serialization/de-serialization required since the actual objects are already in bytes format. Unfortunately, we do not have the luxury of these dangerous “Shoot my own feet features” practices in Java. That is, unless you turn yourself into the dark side by using the famously unsafe using sun.misc.Unsafe ! More on this later…</p>
+<p>In java , when you pass objects around between threads within the same process you can get away by only passing the reference to the actual object. Obviously, you will have to take great care when the passed object is accessed concurrently across the multiple threads in your process. You can deal with issues like this by implementing one of the concurrent access mechanisms available in the JVM. The problem however comes when your target thread is running in a separate process. In that scenario you need a way of serializing/de-serializing the objects before and after they hit the wire. This ,dealing with objects back and forth, becomes very cumbersome suddenly.</p>
+<p>The above additional complexity stems from the fact that we do not have (yet) a way to deal with arrays of structures in java as we do in c/c++. We basically can’t have “unsafe” relations with our data. All objects , including arrays of all types, are passed by reference. As such these objects must all live in the heap and are all susceptible for garbage collection. This basically means that anything you get from the wire has to be “transformed” into actual objects before they are ready for consumption. Lately, the growing majority experience this aspect in Java when dealing with Restful services. An object is first serialized into JSON , sent over the wire via a transport protocol, and then de-serialized when it arrives at its destination before it is passed to the upper application specific code. The simpler the object the easier it is to perform those steps and the faster the overall code becomes. I will not bore you with the multiple technologies available in that arena but i will point you to this comparison.</p>
+<h2 id="memory-control">Memory control</h2>
+<p>Unfortunately, there is no particular way one can instruct the JVM on how objects are stored and how they are placed in memory in contiguous or non contiguous fashion. As far as the general programmer is concerned these pesky details are what make the platform “safe”. As such, these details are considered irrelevant for the majority of use cases. This is exactly why it is not needed for a lot of users. The exception is when your code needs to deal with performance critical access to very large amount of objects and you need to have a good control on how these particular objects are stored in memory efficiently. .</p>
+<p>Furthermore, the access pattern across different threads and cores accessing the actual fields in your objects can also be problematic. False sharing explained here and here is a very good case on why it is important to know your memory layout in a performance critical code. Again this is not for everyone! But you can still see why it is imperative to understand the concepts involved when you need to write performance critical code.</p>
+<p>To make things even more complicated there is no “traditional” way in Java on how you access bytes directly as soon as they are off the network in a zero copy fashion. Once you get data in a NIC buffer the application has to go through a context switch before data is available in user land. The same thing happens when the bytes are on their way out. There are commercial libraries/hardware to do these but so far this not part of the things available out of the box and definitely not for “free” !</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>You would think that someone has already worked out the details for most of these issues and came up with a clean and simplistic way , ala Corba style, for you to send data across different threads/processes and with high speed. Fortunately there are some outstanding libraries out there we will explore in our next articles, but you still have to understand these complexities yourself and you still need to be in the know. Ergo, the need for this first part covering the basics!</p>
+<p>To conclude i will say that we need to figure a way to:</p>
+<p>Turn objects to bytes (and vice versa) in a very high speed fashion
+Make sure we have a good control on how the memory is been used even in java.
+The above outlines only some of the issues i can think of right now. To me these issues constitute a list of requirements i would want my high speed serializing/de-serializing code to deal with. Do i hear a future framework in java in the horizon that would solve (most of) these issues … that’s a “definite maybe” so stay tuned!</p>
+
+                    </div>
+                    
+                    
+                    <div class="after-post-tags">
+                        <ul class="tags">
+                        
+                        <li>
+                        <a href="http://yassinm.github.io/tags/memory">memory</a>
+                        </li>
+                        
+                        </ul>
+                    </div>
+                    
+                    
+                    
+                    <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
+                    
+                        <a class="d-block col-md-6" href="http://yassinm.github.io/2014/walking-down-memory-lane-02/"> &laquo; Walking down memory lane (part 2)</a>
+                    
+                    
+                    <div class="clearfix"></div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+    </div>
+
+
+            </div>
+<div class="jumbotron fortags">
+	<div class="d-md-flex h-100">
+		<div class="col-md-4 transpdark align-self-center text-center h-100">
+			<div class="d-md-flex align-items-center justify-content-center h-100">
+				<h2 class="d-md-block d-none align-self-center py-1 font-weight-light">Explore <span class="d-none d-md-inline">→</span></h2>
+			</div>
+		</div>
+		<div class="col-md-8 p-5 align-self-center text-center">
+			
+			<a class="mt-1 mb-1" href="http://yassinm.github.io/tags/dataflow">dataflow</a>
+			
+			<a class="mt-1 mb-1" href="http://yassinm.github.io/tags/memory">memory</a>
+			
+		</div>
+	</div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-sm-6 text-center text-lg-left">
+                &copy; Copyright Copyright © 2019, Yassin Mohamed; all rights reserved.
+            </div>
+            <div class="col-md-6 col-sm-6 text-center text-lg-right">    
+                <a target="_blank" rel="noopener" href="https://www.wowthemes.net">Mediumish Theme</a> by WowThemes.net
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+        </div>
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+<script src="http://yassinm.github.io/js/mediumish.js"></script>
+
+    </body>
+</html>
