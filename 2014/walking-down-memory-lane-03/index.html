@@ -133,7 +133,7 @@
 
                     
                     <div class="article-post">
-                        <p>If you remember our previous <a href="http://yassinm.github.io/2014/09/25/2014/walking-down-memory-lane-02">article</a> we used a central memory location to share data between two separate threads each running either in the same process or across separate processes. These processes could even be located on separate machine or even be written in two different languages.</p>
+                        <p>If you remember our previous <a href="http://yassinm.github.io/2014/walking-down-memory-lane-02">article</a> we used a central memory location to share data between two separate threads each running either in the same process or across separate processes. These processes could even be located on separate machine or even be written in two different languages.</p>
 <p><img src="http://yassinm.github.io/images/walking-down-memory-lane-03-000.png" alt="Fig1"></p>
 <p>From the above you can see that we only have one thread writing to the shared data. The other thread is only reading this shared data once it is notified that the data was correctly published by the writer thread. Now the question is how do these threads synchronize access to this shared memory location with minimal contention ?</p>
 <h2 id="lock-free-rings-to-the-rescue">Lock free rings to the rescue</h2>
