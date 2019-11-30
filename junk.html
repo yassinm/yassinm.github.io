@@ -1,0 +1,10 @@
+
+<ul>
+  <li><a>{{ .Term }} </a></li>
+</ul>
+
+{{ range $post_featured := .Site.Taxonomies.featured }}
+{{ range $post_featured.Pages  }}
+{{- partial "list-partials/postbox.html" . -}}
+{{end}}
+{{end}}

@@ -1,0 +1,60 @@
+baseurl = "http://yassinm.github.io"
+
+theme = "mediumish"
+languageCode = "en-us"
+title = "Yassin Mohamed"
+copyright = "Copyright © 2019, Yassin Mohamed; all rights reserved."
+
+#disqusShortname = "gopheracademy"
+
+paginate = 10
+summaryLength = 25
+canonifyurls = true
+
+# Enable syntax highlighting from https://help.farbox.com/pygments.html
+#pygmentsStyle = "vs"
+pygmentsStyle = "friendly"
+pygmentsCodefences = true
+pygmentsCodefencesGuessSyntax = true
+# pygmentsUseClasses=true
+pygmentsOptions = "linenos=table"
+
+[taxonomies]
+  tag = "tags"
+  series = "series"
+  featured = "featured"
+
+# If you want to use disqus, uncomment the line below
+# disqusShortname = "yourdiscussshortname"
+
+# ids used below are not valid. Replace with valid ones
+[params]
+  # ga_analytics = "" # google analytics ID e.g UA-116386578-1
+  
+  # ga_verify = "" # google verification code e.g 5jb-rxeBfITeJQKOuUss3ud6FPGTxXkCho-ZN5qlrZg
+  # twitter = "" # twitter handle e.g @weru
+  author= "yassinm"
+  #author_thumb= "images/profile.png"
+
+[params.index]
+  picture = "images/profile.png"
+  subtitle = "Musing from java and go"
+  title = "My Blog"
+  mdtext = ''' '''
+  alertbar = true
+
+[params.social]
+  github = "yassinm"
+  twitter = "yassinm_tw"
+
+## Main Menu
+[[menu.main]]
+    name = "Series"
+    weight = 100
+    identifier = "series"
+    url = "/series"
+[[menu.main]]
+    name = "Tags"
+    identifier = "tags"
+    weight = 200
+    url = "/tags"

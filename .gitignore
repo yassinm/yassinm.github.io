@@ -6,8 +6,9 @@ vendor
 node_modules
 package-lock.json
 
-*.min.js
-*.min.css
+# *.min.js
+# *.min.css
 
+public
+resources
 themes/dev
-themes/*/static
